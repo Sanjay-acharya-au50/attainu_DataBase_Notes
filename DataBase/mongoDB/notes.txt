@@ -1,0 +1,110 @@
+
+
+-------------------------------------------------
+
+"mongod" is the primary daemon process for the MongoDB system.
+It handles data requests, manages data access, and performs background management operations. 
+{
+    --> monogb server should be stoped
+}
+
+to run mongod ( err in mac )
+--> mongod --dbpath ./mongo-data 
+
+-------------------------------------------------
+
+
+to check background server running
+
+--> brew services list
+
+-------------------------------------------------
+
+
+-> to start mongodb
+* brew services restart mongodb-community
+
+-------------------------------------------------
+
+-> to stop mongodb
+* brew services stop mongodb-community
+
+-------------------------------------------------
+
+* after starting the server : 
+
+--> mongo
+
+* to check the directory that we created :
+
+--> show dbs
+
+* to change the directory :
+
+--> use learning_mongodb
+
+
+-------------------------------------------------
+
+
+
+  <---- class notes ---->
+
+  what is DATABASE 
+  * we store data
+  * we acces data
+  * we modify data
+  * we maintain data
+
+  Types of DATABASE
+  * SQL      -> structuce Query language
+  * No SQL
+
+
+ -->  SQL | structuce Query language
+  * its a table & it contens ROW/COLUMN -> each row called as RECORD
+  show data in form of table, ex: SQL
+
+
+
+  \\ MySQL run on SQL
+
+
+  --> NO SQL | NO structuce Query language
+
+    there is a company which runs on ADS. they where not able to manage because of large data
+    they cameUp with a software mongoDB.
+
+    step for DB 
+    * we have to create a dataBase
+    * we create a table
+    * we insert data in table
+
+
+        ****
+    ->  mongoDB doesnt uses table it uses document to store data 
+    ->  inplace of table we have collection in mongoDB
+
+     step for DB 
+    * we have to create a dataBase
+    * we create a collection
+    * in thic collection we can have myData
+
+    inplace of table we use document -> jason() ->
+    {
+      what is json();
+      its a pair of key(property) & value
+
+      ex -> { "x" : "y"} 
+    }
+
+  table = collection
+  row/column = document
+
+  schema -> the way want to design the document
+
+
+  -> SQL  vs                                      -> NO SQL
+  * based on table schema                     * based on document
+  * follow a querry language                  * follow mongoose package
+  * performance is not good for huge data     * mongoDB performance good with huge data

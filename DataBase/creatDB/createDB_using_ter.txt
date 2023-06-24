@@ -1,0 +1,30 @@
+to run the mongoDB :
+ -> mongo
+ >  show dbs -> shows the db
+ > use.newDB -> CREATE new db -> if we want to see after creating only db it wont show, we have to insert collection inside it;
+ > db.createCollection("collection_name"); creating collection
+ > show collections -> shows the created collection -> inside collection fields/data is empty
+ > db.collection_name.insert({"key":"value"}); -> inserting fields/data key and value
+ > db.newCollection_name.insert({"new_key":"new_value"})
+ > show collections -> * collection_name
+                       * newCollection_name
+
+ > db.collection_name.find(); -> it shows the fields/data inside collection_name {_id : "xyz" , "new_key":"new_value"}
+
+
+
+ data base name |
+ ---------------        collections
+ my_project   ->|   |-----------------------------| |-----------------------------|
+ my_second_db   |   |   -id : ObjectId : "xyz"    | -> fields or data           |
+                |   |   name : "san"              | -> fields or data          document
+                    |   my_bike : "RS200"         | -> fields or data          document
+                    |  my_car : "dustor_and_esteem| -> fields or data            |
+                    |-----------------------------| |-----------------------------|
+
+                    |-----------------------------| |-----------------------------|
+                    |   -id : ObjectId : "xyz"    | -> fields or data           |
+                    |   name : "san"              | -> fields or data          document
+                    |   my_bike : "RS200"         | -> fields or data          document
+                    |  my_car : "dustor_and_esteem| -> fields or data            |
+                    |-----------------------------| |-----------------------------|

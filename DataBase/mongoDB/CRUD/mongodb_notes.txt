@@ -1,0 +1,46 @@
+
+
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost:27017/data_Base_Name", ()=>{
+    console.log("mongodb-loading")
+})
+const mongoSchema = new mongoose.Schema({name: String, bike : String}); -> structure
+const adminName = new mongoose.model("collection_name", mongoSchema) -> collection_name& Schema name
+const creatObj = new adminName({name: "san", bike:"RS"});
+creatObj.save();
+
+
+
+
+------------------------------------
+
+// access express server
+const express = require("express");
+
+calling express server
+const app = express();
+
+// access mongoose server
+const mongoose = require("mongoose");
+
+
+//cnnecting monno-db -> bro - is a data-base name
+mongoose.connect("mongodb://localhost:27017/bro", ()=>{
+    console.log("mongodb-loading");
+})
+
+// Schema is struction of documents
+const mongoSchema = new mongoose.Schema({name : String, cast : String});
+
+// demo_created____ is collection name
+const Name = new mongoose.model("demo_created____", mongoSchema);
+
+// creating object to insert values
+const added = new Name({name : "zenMan", cast: "xyz"});
+
+// save is a function
+added.save();
+
+app.listen(5000, ()=>{
+    console.log("loading");
+})
